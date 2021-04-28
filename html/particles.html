@@ -9,7 +9,6 @@ canvas{width:100%;height:100%;}
 <body>
 <script src="tsne.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
-<script src="http://threejs.org/examples/js/controls/OrbitControls.js"></script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
 //Scene & Camera
@@ -28,7 +27,7 @@ opt.dim = 3; // dimensionality of the embedding (2 = default)
 var tsne = new tsnejs.tSNE(opt); // create a tSNE instance
 
 //Orbit controls
-var controls = new THREE.OrbitControls( camera );
+//var controls = new THREE.OrbitControls( camera );
 //Render settings
 var Y;
 var renderer = new THREE.WebGLRenderer();
@@ -118,7 +117,7 @@ var render = function () {
 
   }
 
-  controls.update();
+  //controls.update();
   //Animation
   // particleObject.scale.x+=Math.random() - Math.random()
   // particleObject.scale.y+=Math.random() - Math.random()
